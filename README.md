@@ -1,9 +1,11 @@
-# Building React Native from WSL2
+# Building a React Native Project in WSL2
 
-This is the list of steps and resources I used to get a React Native build working from WSL2 Ubuntu
-running on Windows 11 using an Android emulator running on the same Windows 11 host machine. There are
-quite a few little annoying nuances to getting this set up, so I decided to write this document detailing
-the process in case I ever need to do the same setup steps again.
+This is the list of steps and resources I used to get a React Native project build working on WSL2 Ubuntu
+using Windows 11 running an Android emulator. There are quite a few little annoying nuances to getting
+this set up, so I decided to write this document detailing the process in case I ever need to do the
+same setup steps again.
+
+For reference, the working build was using *react-native 0.70.0* and *react 18.2.0*.
 
 ## Resource List
 
@@ -95,6 +97,18 @@ fail with an *OutOfMemoryError* at the very last step. Super annoying.
 5. In WSL2, start the build with `yarn react-native run-android --variant=debug --active-arch-only`
 
 ## Build Issue FAQ
+
+### adb version mismatch
+
+The `adb` executable must be the same version in both Windows and WSL2. To get the latest version,
+run `sdkmanager "platform-tools"`.
+
+For example, if the first line of output from running `adb version` is
+
+> Android Debug Bridge version **1.0.41**
+
+then both your Windows and WSL2 adb executables must output that same version. Differing versions will
+result in an error.
 
 ### Build fails with EACCES when starting gradlew
 
