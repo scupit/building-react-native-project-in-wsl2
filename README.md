@@ -1,20 +1,18 @@
 # Building React Native from WSL2
 
-This is a "guide" for getting a React Native build working from WSL2 when using an Android Emulator on
-Windows.
+This is the list of steps and resources I used to get a React Native build working from WSL2 Ubuntu
+running on Windows 11 using an Android emulator running on the same Windows 11 host machine. There are
+quite a few little annoying nuances to getting this set up, so I decided to write this document detailing
+the process in case I ever need to do the same setup steps again.
 
 ## Resource List
 
-### Guides
+### Guides and Intros
 
 - [**General mostly comprehensive guide**](https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade)
 - [Improving build speed](https://reactnative.dev/docs/next/build-speed)
 - [New architecture info](https://reactnative.dev/docs/new-architecture-intro)
 - [Configuring adb server socket](https://stackoverflow.com/questions/72078857/fix-android-studio-react-native-wsl-wont-launch-emulator-with-more-errors)
-
-### Fixes
-
-- [EACCES error fix](https://stackoverflow.com/questions/54541734/spawnsync-gradlew-eacces-error-when-running-react-native-project-on-emulator)
 
 ### General
 
@@ -22,6 +20,10 @@ Windows.
 - [React Native environment setup](https://reactnative.dev/docs/environment-setup)
 - [Android Studio command line tools](https://developer.android.com/studio#command-tools)
 - [OpenJDK General-Availability release archive](https://jdk.java.net/archive/)
+
+### Fixes
+
+- [EACCES error fix](https://stackoverflow.com/questions/54541734/spawnsync-gradlew-eacces-error-when-running-react-native-project-on-emulator)
 
 ## Configuring Windows
 
